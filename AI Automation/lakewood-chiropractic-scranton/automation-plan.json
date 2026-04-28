@@ -1,0 +1,64 @@
+{
+  "business_name": "Lakewood Chiropractic",
+  "city": "Scranton, PA",
+  "industry": "Chiropractic / Healthcare",
+  "main_problems": [
+    "Missed calls from new patients go to voicemail — many don't leave a message and call a competitor",
+    "Auto accident patients are time-sensitive — delays in follow-up mean lost cases to other practices",
+    "No automated system to follow up on appointment inquiries submitted after hours",
+    "New patients who no-show often fall through the cracks with no reschedule sequence",
+    "Existing patients have no reminder system — appointment no-show rates are higher than necessary"
+  ],
+  "recommended_automations": [
+    {
+      "name": "Missed Call Text-Back",
+      "description": "When a call is missed, an automated SMS fires within 30 seconds: 'Hi! This is Lakewood Chiropractic — sorry we missed your call. We'd love to help. Reply here and we'll get right back to you, or visit [chatbot link] to book anytime.'",
+      "trigger": "Missed inbound call",
+      "tools": ["Twilio", "n8n"],
+      "estimated_value": "Recovers 20–30% of missed calls that would otherwise go to a competitor"
+    },
+    {
+      "name": "Auto Accident Fast-Response Sequence",
+      "description": "When a chatbot or web form flags an auto accident inquiry, a 3-touch sequence fires: Touch 1 — SMS within 5 minutes from the office. Touch 2 — same-day follow-up call reminder. Touch 3 — next morning email with insurance info and intake form link.",
+      "trigger": "Chatbot flags 'auto accident' intent or form submission",
+      "tools": ["n8n", "Twilio", "Postmark"],
+      "estimated_value": "Auto accident cases average $3,000–$8,000 in revenue — recovering 2 extra cases/month = $6,000–$16,000"
+    },
+    {
+      "name": "Appointment Confirmation + Reminder",
+      "description": "Automated SMS sent at booking confirmation, then again 24 hours and 2 hours before the appointment. Includes easy reschedule option to reduce no-shows without losing the patient.",
+      "trigger": "Appointment booked (chatbot or front desk)",
+      "tools": ["n8n", "Twilio"],
+      "estimated_value": "Reduces no-shows by 30–40%"
+    },
+    {
+      "name": "New Patient No-Show Reschedule Sequence",
+      "description": "If a new patient no-shows, automated SMS fires 1 hour after missed appointment: 'We missed you today — life happens! We'd love to get you rescheduled. Reply here or click [link].' Follow-up again at 48 hours.",
+      "trigger": "New patient appointment no-show",
+      "tools": ["n8n", "Twilio"],
+      "estimated_value": "Recovers 30–40% of no-shows who would otherwise not reschedule"
+    },
+    {
+      "name": "New Lead → CRM Sync + Owner Alert",
+      "description": "Every chatbot lead, web form submission, or missed call is automatically logged to Google Sheets with name, phone, source, and timestamp. Owner receives an SMS or email alert for any auto accident or high-priority inquiry.",
+      "trigger": "Any new lead captured",
+      "tools": ["n8n", "Google Sheets", "Postmark", "Twilio"],
+      "estimated_value": "Full pipeline visibility — no leads fall through"
+    }
+  ],
+  "tools_stack": {
+    "automation": "n8n (self-hosted)",
+    "sms": "Twilio",
+    "email": "Postmark",
+    "crm": "Google Sheets (or HubSpot Free)",
+    "forms": "Practice management system webhook or Typeform"
+  },
+  "expected_outcomes": {
+    "leads_recovered_monthly": "10–20 additional new patient inquiries from missed calls",
+    "auto_accident_cases_recovered": "1–3 additional cases per month",
+    "no_show_reduction": "30–40%",
+    "estimated_additional_monthly_revenue": "$3,000–$10,000"
+  },
+  "implementation_timeline": "5–7 business days to build and test",
+  "monthly_retainer_estimate": "$397–$597/month"
+}

@@ -1,0 +1,70 @@
+{
+  "business_name": "Kings Cuts Barbershop",
+  "city": "Scranton, PA",
+  "phone": "(570) 555-0164",
+  "address": "741 Adams Ave, Scranton, PA 18510",
+
+  "hours": {
+    "Monday":    "Closed",
+    "Tuesday":   "9:00 AM – 7:00 PM",
+    "Wednesday": "9:00 AM – 7:00 PM",
+    "Thursday":  "9:00 AM – 7:00 PM",
+    "Friday":    "9:00 AM – 7:00 PM",
+    "Saturday":  "8:00 AM – 6:00 PM",
+    "Sunday":    "10:00 AM – 4:00 PM"
+  },
+
+  "services": {
+    "haircut":      { "name": "Men's Haircut",       "price": "$25", "duration": "~25 min" },
+    "fade":         { "name": "Fade & Taper",         "price": "$28", "duration": "~30 min" },
+    "beard":        { "name": "Beard Trim & Shape",   "price": "$15", "duration": "~15 min" },
+    "combo":        { "name": "Haircut + Beard",      "price": "$38", "duration": "~40 min" },
+    "shave":        { "name": "Hot Towel Shave",      "price": "$35", "duration": "~45 min" },
+    "kids":         { "name": "Kids Cut (12 & under)","price": "$18", "duration": "~20 min" },
+    "lineup":       { "name": "Lineup & Edge Up",     "price": "$12", "duration": "~15 min" }
+  },
+
+  "selling_points": [
+    "Walk-ins always welcome. Book online to skip the wait.",
+    "Experienced barbers who take their time — no rushing you out the chair.",
+    "Clean shop, consistent cuts, great conversation. Come see why our regulars don't go anywhere else."
+  ],
+
+  "busy_times": {
+    "peak":     "Saturday mornings 9am–12pm and Friday evenings are our busiest — book ahead to skip the wait.",
+    "off_peak": "Weekday mornings (Tue–Thu before noon) are the quietest. Walk right in."
+  },
+
+  "faq": {
+    "walk_ins":    "Yes — walk-ins are always welcome. We recommend booking on Saturdays and Fridays to avoid a wait.",
+    "wait_time":   "Weekday waits are usually 10–20 minutes. Saturday mornings can run 30–45 minutes. Book an appointment to skip the line.",
+    "kids":        "Absolutely. We're great with kids. Children 12 and under are $18. Most kids love the chair.",
+    "how_long":    "A standard haircut takes about 25 minutes. Hot towel shaves take around 45 minutes.",
+    "parking":     "Street parking on Adams Ave. Usually easy to find a spot right out front.",
+    "booking":     "You can book right here through the chat, or call us at (570) 555-0164."
+  },
+
+  "intents": {
+    "appointment": ["book", "appointment", "schedule", "reserve", "set up", "get a time", "come in"],
+    "walk_in":     ["walk in", "walk-in", "drop in", "just come", "no appointment", "without appointment"],
+    "wait_time":   ["wait", "how long", "busy", "how busy", "crowded", "wait time", "wait today"],
+    "pricing":     ["price", "cost", "how much", "rates", "pricing", "charge", "fee"],
+    "services":    ["what do you do", "services", "cuts", "what kind", "what you offer", "options"],
+    "fade":        ["fade", "taper", "skin fade", "bald fade", "low fade", "high fade", "mid fade"],
+    "beard":       ["beard", "mustache", "facial hair", "shape up", "beard trim"],
+    "shave":       ["shave", "straight razor", "hot towel", "clean shave", "razor"],
+    "kids":        ["kids", "child", "children", "boy", "son", "young", "kid", "my son"],
+    "hours":       ["hours", "open", "close", "when", "today", "what time", "sunday", "monday"],
+    "location":    ["address", "where", "directions", "parking", "find you"],
+    "trust":       ["reviews", "good barber", "best barber", "recommend", "experienced"]
+  },
+
+  "tone": "casual, confident, straightforward — barbershop energy, no fluff",
+  "primary_goal": "book an appointment or answer walk-in questions",
+  "brand_color": "#1e3a5f",
+
+  "greeting": "What's up! Welcome to Kings Cuts ✂️ I can book you an appointment, tell you the wait, or answer any questions. What do you need?",
+  "after_hours_message": "We're closed right now. Drop your name and number and we'll hit you back when we open. Or book online anytime.",
+  "lead_captured_message": "You're booked, {name}! We'll send you a reminder before your appointment. See you soon.",
+  "fallback_message": "What can I help you with — booking an appointment, checking the wait, or questions about our services?"
+}

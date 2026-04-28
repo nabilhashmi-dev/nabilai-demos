@@ -1,0 +1,69 @@
+{
+  "business_name": "Lakewood Chiropractic",
+  "city": "Scranton, PA",
+  "phone": "(570) 555-0247",
+  "address": "524 Mulberry St, Scranton, PA 18510",
+
+  "hours": {
+    "Monday":    "8:00 AM – 6:00 PM",
+    "Tuesday":   "8:00 AM – 6:00 PM",
+    "Wednesday": "8:00 AM – 1:00 PM",
+    "Thursday":  "8:00 AM – 6:00 PM",
+    "Friday":    "8:00 AM – 5:00 PM",
+    "Saturday":  "8:00 AM – 12:00 PM",
+    "Sunday":    "Closed"
+  },
+
+  "services": [
+    "Chiropractic Adjustment",
+    "Spinal Decompression",
+    "Sports Injury Rehab",
+    "Auto Accident Recovery",
+    "Massage Therapy",
+    "Digital X-Ray On-Site"
+  ],
+
+  "selling_points": [
+    "Same-day appointments available for new patients in pain.",
+    "We verify your insurance before your first visit — no surprise bills.",
+    "Over 15 years serving Scranton. Most patients feel relief after their very first adjustment."
+  ],
+
+  "insurance": ["Blue Cross Blue Shield", "Aetna", "Cigna", "Medicare", "United Healthcare", "Geisinger"],
+
+  "faq": {
+    "first_visit":     "Your first visit includes a consultation, health history review, and examination. If you're a good candidate for care, we typically begin treatment the same day. Plan on about an hour.",
+    "insurance_check": "We accept most major plans — Blue Cross, Aetna, Cigna, Medicare, United Healthcare, and Geisinger. We verify your benefits before your visit so there are no surprises.",
+    "conditions":      "We treat back pain, neck pain, headaches, sciatica, sports injuries, and auto accident injuries. We also see patients for general wellness and maintenance care.",
+    "xray":            "Yes — digital X-ray is on site. We take them during your first visit if needed, at no extra charge.",
+    "adjustment_time": "Most adjustments take 10–15 minutes. First visits run about an hour with the full exam.",
+    "pain":            "Adjustments are generally comfortable. Most patients are surprised by how good they feel right after. Mild soreness the next day is normal and fades quickly.",
+    "accident":        "If you were in an auto accident, don't wait — injuries can worsen quickly. Most auto insurance covers chiropractic care. We can often get you in the same day.",
+    "parking":         "Free parking lot directly behind the building off Mulberry St."
+  },
+
+  "intents": {
+    "appointment": ["book", "appointment", "schedule", "come in", "get in", "see someone", "available"],
+    "new_patient": ["new patient", "first time", "never been", "first visit", "never seen a chiropractor"],
+    "back_pain":   ["back pain", "back hurts", "lower back", "upper back", "spine", "herniated", "disc", "spinal"],
+    "neck_pain":   ["neck pain", "neck hurts", "stiff neck", "whiplash", "neck stiffness"],
+    "headache":    ["headache", "migraine", "head pain", "tension headache"],
+    "sciatica":    ["sciatica", "sciatic", "leg pain", "shooting pain", "numbness", "tingling down"],
+    "accident":    ["car accident", "auto accident", "accident", "collision", "crash", "fender"],
+    "sports":      ["sports injury", "athlete", "workout", "sprain", "strain", "running injury"],
+    "insurance":   ["insurance", "coverage", "covered", "medicare", "aetna", "blue cross", "cigna", "copay", "cost", "how much", "price"],
+    "hours":       ["hours", "open", "close", "when", "today", "what time"],
+    "location":    ["address", "where", "directions", "parking", "find you"],
+    "xray":        ["x-ray", "xray", "x ray", "imaging"],
+    "trust":       ["reviews", "experience", "how long", "best", "why choose"]
+  },
+
+  "tone": "professional, warm, and reassuring — patients are often in pain and anxious",
+  "primary_goal": "book a new patient appointment",
+  "brand_color": "#1a7a8a",
+
+  "greeting": "Hi! Welcome to Lakewood Chiropractic 👋 Whether you're dealing with pain or just want to feel your best, we're here to help. What brings you in today?",
+  "after_hours_message": "We're closed right now — but if you're in pain, don't wait. Leave me your name and number and we'll call you first thing when we open.",
+  "lead_captured_message": "You're all set, {name}! Our front desk will call you shortly to confirm your appointment. We look forward to helping you feel better.",
+  "fallback_message": "Happy to help — are you looking to book an appointment, ask about a condition, or check your insurance coverage?"
+}

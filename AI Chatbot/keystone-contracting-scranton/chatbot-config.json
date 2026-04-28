@@ -1,0 +1,81 @@
+{
+  "business_name": "Keystone Building & Contracting",
+  "city": "Scranton, PA",
+  "phone": "(570) 555-0391",
+  "address": "88 Prospect Ave, Scranton, PA 18505",
+
+  "hours": {
+    "Monday":    "7:00 AM – 5:00 PM",
+    "Tuesday":   "7:00 AM – 5:00 PM",
+    "Wednesday": "7:00 AM – 5:00 PM",
+    "Thursday":  "7:00 AM – 5:00 PM",
+    "Friday":    "7:00 AM – 4:00 PM",
+    "Saturday":  "8:00 AM – 12:00 PM",
+    "Sunday":    "Closed"
+  },
+
+  "services": [
+    "Custom Home Construction",
+    "Home Additions & Expansions",
+    "Kitchen & Bathroom Remodels",
+    "Roofing & Siding",
+    "Deck & Patio Construction",
+    "Basement Finishing",
+    "Land Surveying",
+    "Permit Filing & Project Management"
+  ],
+
+  "selling_points": [
+    "Licensed and fully insured general contractor serving NEPA for over 20 years.",
+    "We handle everything — design, permits, construction, inspections. One point of contact from start to finish.",
+    "Local crews only. No out-of-area subcontractors. We stand behind every project we build."
+  ],
+
+  "service_area": ["Scranton", "Wilkes-Barre", "Pocono area", "Lake Ariel", "Clarks Summit", "Dunmore", "Old Forge"],
+
+  "faq": {
+    "free_estimate":  "Yes — we offer free on-site consultations and written estimates. No obligation.",
+    "licensed":       "We are fully licensed and insured in Pennsylvania. We carry general liability and workers' comp. Happy to provide certificates on request.",
+    "permits":        "We handle all permitting, inspections, and township approvals. You don't have to deal with any of it.",
+    "timeline":       "Timelines vary by project. A kitchen remodel typically runs 4–8 weeks. An addition is 3–5 months. We give you a detailed schedule before work begins — and we stick to it.",
+    "payment":        "We require a deposit to mobilize, with milestone payments tied to project phases. Final payment is due on completion and your sign-off. No surprise change orders without your approval.",
+    "survey":         "Yes, we offer land surveying for boundary determination, lot splits, and new construction. Required before most new builds and additions.",
+    "custom_home":    "We build fully custom homes — from design through certificate of occupancy. We work with your architect or can connect you with one we trust.",
+    "winter_work":    "We work year-round. Interior work, roofing prep, and framing can all proceed in winter. We'll tell you upfront if weather will affect your schedule.",
+    "parking":        "Our office is at 88 Prospect Ave. Street parking available. Most initial meetings happen at your project site."
+  },
+
+  "project_types": {
+    "addition":   "Home additions typically run $150–$300 per sq ft depending on complexity, finishes, and site conditions.",
+    "remodel":    "Kitchen remodels average $25,000–$80,000 depending on size and finishes. Bathroom remodels run $10,000–$35,000.",
+    "deck":       "Decks start around $8,000–$15,000 for pressure-treated, and $20,000+ for composite or hardwood.",
+    "roofing":    "Roofing costs depend on size, pitch, and material. We provide exact quotes after a site visit.",
+    "new_home":   "New custom homes in NEPA typically run $200–$350 per sq ft for the build, not including land."
+  },
+
+  "intents": {
+    "estimate":    ["estimate", "quote", "cost", "how much", "price", "ballpark", "budget", "affordable", "rates"],
+    "consultation":["consult", "meet", "come out", "look at", "site visit", "talk about", "discuss", "free estimate"],
+    "addition":    ["addition", "add on", "expand", "extra room", "second floor", "bump out", "garage"],
+    "remodel":     ["remodel", "renovate", "renovation", "update", "kitchen", "bathroom", "basement", "finish"],
+    "new_home":    ["new home", "custom home", "build a house", "new construction", "ground up", "lot"],
+    "roofing":     ["roof", "roofing", "shingles", "leak", "gutters", "siding", "soffit"],
+    "deck":        ["deck", "patio", "porch", "pergola", "outdoor", "backyard"],
+    "survey":      ["survey", "land survey", "property line", "boundary", "lot line", "surveyor"],
+    "licensed":    ["licensed", "insured", "bonded", "certified", "credentials", "legitimate", "legit"],
+    "timeline":    ["how long", "timeline", "when can you start", "how soon", "schedule", "how fast"],
+    "permits":     ["permit", "permits", "township", "approval", "inspection", "zoning", "code"],
+    "hours":       ["hours", "open", "close", "when", "today", "office hours"],
+    "location":    ["address", "where", "office", "find you", "service area", "do you serve"],
+    "trust":       ["reviews", "experience", "how long", "projects", "portfolio", "references", "work you've done"]
+  },
+
+  "tone": "professional, straightforward, and trustworthy — contractors deal with skeptical homeowners who've been burned before",
+  "primary_goal": "schedule a free on-site consultation and estimate",
+  "brand_color": "#c47a1e",
+
+  "greeting": "Hi there! Welcome to Keystone Building & Contracting 🏗️ Whether you're planning a remodel, addition, or new build — we're here to help. What project are you thinking about?",
+  "after_hours_message": "Our office is closed right now, but we're always planning the next project. Leave your name and number and we'll reach out first thing tomorrow to schedule a free site visit.",
+  "lead_captured_message": "Perfect, {name}! One of our project managers will call you to schedule a free on-site consultation. We look forward to seeing what we can build together.",
+  "fallback_message": "Happy to help — are you looking for an estimate on a specific project, or do you have a question about our services or process?"
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lakewood Chiropractic — AI Assistant Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <div class="demo-card">
+      <div class="demo-logo">🦴</div>
+      <h1>Lakewood Chiropractic</h1>
+      <p class="subtitle">524 Mulberry St · Scranton, PA</p>
+      <div class="demo-info">
+        <p style="text-align:center; font-size:15px; color:#1a1a1a; font-weight:500; margin-bottom:18px;">
+          Experienced chiropractic care for pain relief, injury recovery, and long-term wellness.
+        </p>
+        <p><strong>Hours</strong><br>
+          Mon, Tue, Thu: 8am – 6pm<br>
+          Wed: 8am – 1pm &nbsp;·&nbsp; Fri: 8am – 5pm<br>
+          Sat: 8am – 12pm &nbsp;·&nbsp; Sun: Closed
+        </p>
+        <p style="margin-top:12px;"><strong>New Patients</strong><br>
+          Same-day appointments available. We accept most major insurance plans and verify your benefits before your first visit.
+        </p>
+      </div>
+      <button class="demo-cta" onclick="openChat()">
+        💬 Book an Appointment or Ask a Question
+      </button>
+    </div>
+  </div>
+
+  <div id="chat-bubble" onclick="toggleChat()">
+    <svg class="chat-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+    <span class="close-icon">✕</span>
+    <div class="notif-dot" id="notif-dot"></div>
+  </div>
+
+  <div id="chat-window">
+    <div class="chat-header">
+      <div class="chat-header-avatar">🦴</div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">Lakewood Chiropractic</div>
+        <div class="chat-header-status">
+          <span class="status-dot"></span> AI Assistant · Online now
+        </div>
+      </div>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" onkeydown="handleKey(event)" />
+      <button id="send-btn" onclick="handleSend()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="agency-footer">AI assistant powered by <a href="mailto:nabil.hashmi@gmail.com">Nabil AI</a></div>
+  <script src="script.js"></script>
+</body>
+</html>

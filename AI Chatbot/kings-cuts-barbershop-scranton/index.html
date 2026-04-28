@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kings Cuts Barbershop — AI Assistant Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="demo-page">
+    <div class="demo-card">
+      <div class="demo-logo">✂️</div>
+      <h1>Kings Cuts Barbershop</h1>
+      <p class="subtitle">741 Adams Ave · Scranton, PA</p>
+      <div class="demo-info">
+        <p style="text-align:center; font-size:15px; color:#1a1a1a; font-weight:500; margin-bottom:18px;">
+          Clean cuts, experienced barbers, no wait when you book ahead.
+        </p>
+        <p><strong>Hours</strong><br>
+          Tue – Fri: 9am – 7pm<br>
+          Sat: 8am – 6pm &nbsp;·&nbsp; Sun: 10am – 4pm<br>
+          Mon: Closed
+        </p>
+        <p style="margin-top:12px;"><strong>Walk-Ins Welcome</strong><br>
+          Book ahead on weekends to skip the wait. Appointments always get priority.
+        </p>
+      </div>
+      <button class="demo-cta" onclick="openChat()">
+        💬 Book a Cut or Check the Wait
+      </button>
+    </div>
+  </div>
+
+  <div id="chat-bubble" onclick="toggleChat()">
+    <svg class="chat-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </svg>
+    <span class="close-icon">✕</span>
+    <div class="notif-dot" id="notif-dot"></div>
+  </div>
+
+  <div id="chat-window">
+    <div class="chat-header">
+      <div class="chat-header-avatar">✂️</div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">Kings Cuts Barbershop</div>
+        <div class="chat-header-status">
+          <span class="status-dot"></span> AI Assistant · Online now
+        </div>
+      </div>
+    </div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a message..." autocomplete="off" onkeydown="handleKey(event)" />
+      <button id="send-btn" onclick="handleSend()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="agency-footer">AI assistant powered by <a href="mailto:nabil.hashmi@gmail.com">Nabil AI</a></div>
+  <script src="script.js"></script>
+</body>
+</html>

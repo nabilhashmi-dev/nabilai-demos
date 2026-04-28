@@ -1,0 +1,69 @@
+{
+  "business_name": "Luxe Aesthetics MedSpa",
+  "city": "Scranton, PA",
+  "phone": "(570) 555-0318",
+  "address": "189 Wyoming Ave, Scranton, PA 18503",
+
+  "hours": {
+    "Monday":    "Closed",
+    "Tuesday":   "10:00 AM – 7:00 PM",
+    "Wednesday": "10:00 AM – 7:00 PM",
+    "Thursday":  "10:00 AM – 7:00 PM",
+    "Friday":    "10:00 AM – 6:00 PM",
+    "Saturday":  "9:00 AM – 5:00 PM",
+    "Sunday":    "Closed"
+  },
+
+  "services": [
+    "Botox & Dysport",
+    "Dermal Fillers (lips, cheeks, jawline)",
+    "Laser Hair Removal",
+    "HydraFacial",
+    "Chemical Peels",
+    "Microneedling",
+    "Complimentary Skin Consultations"
+  ],
+
+  "selling_points": [
+    "All injectable treatments performed by licensed medical professionals in a physician-supervised practice.",
+    "Complimentary consultations for all new clients — no pressure, no commitment.",
+    "Natural-looking results. Our goal is to enhance your features, not change them."
+  ],
+
+  "faq": {
+    "botox_duration":    "Botox typically lasts 3–4 months. Results vary by area and individual metabolism. Most clients come in 3–4 times per year to maintain results.",
+    "filler_duration":   "Dermal fillers last 6–18 months depending on the product and area. Lip filler tends to metabolize faster than cheek or jawline filler.",
+    "downtime":          "Botox has virtually no downtime — most clients go right back to their day. Fillers may cause mild swelling or bruising for 24–48 hours. Laser treatments vary by area.",
+    "pain":              "Botox feels like a quick pinch. We use topical numbing cream for fillers and sensitive areas. Most clients are surprised by how comfortable the experience is.",
+    "consultation":      "All new clients start with a complimentary consultation. We assess your skin, talk through your goals, and build a personalized plan — zero pressure.",
+    "who_performs":      "All injectable treatments are performed by our licensed nurse practitioner and physician assistant under physician supervision.",
+    "botox_cost":        "Botox is priced per unit. Most treatment areas require 20–40 units. We'll give you an exact quote during your complimentary consultation.",
+    "laser":             "We offer laser hair removal for face and body. Results build over 6–8 sessions. We can assess your skin type and hair color during a free consultation.",
+    "parking":           "Street parking is available on Wyoming Ave. There is also a small lot adjacent to the building."
+  },
+
+  "intents": {
+    "consultation": ["consultation", "consult", "book", "appointment", "schedule", "come in", "new client", "first time", "meet with"],
+    "botox":        ["botox", "dysport", "wrinkle", "forehead", "crow's feet", "frown lines", "11s", "anti-aging", "lines"],
+    "fillers":      ["filler", "fillers", "lips", "lip filler", "cheeks", "jawline", "nasolabial", "volume", "juvederm", "restylane", "plump"],
+    "laser":        ["laser", "laser hair", "hair removal", "ipl", "photofacial", "unwanted hair"],
+    "hydrafacial":  ["hydrafacial", "hydra facial", "facial", "glow", "hydration", "skin treatment", "deep clean"],
+    "microneedling":["microneedling", "micro needling", "collagen", "rf microneedling", "scarring"],
+    "peels":        ["peel", "chemical peel", "exfoliat", "dark spots", "hyperpigmentation", "uneven tone"],
+    "downtime":     ["downtime", "recovery", "bruising", "swelling", "side effects", "safe", "risks"],
+    "pricing":      ["price", "cost", "how much", "per unit", "package", "rates", "afford", "expensive"],
+    "skin":         ["skin", "acne", "scars", "pigmentation", "texture", "pores", "dull", "tired"],
+    "hours":        ["hours", "open", "close", "when", "today", "what time"],
+    "location":     ["address", "where", "directions", "parking"],
+    "trust":        ["safe", "certified", "qualified", "reviews", "experience", "licensed", "doctor", "medical"]
+  },
+
+  "tone": "warm, luxurious, confidence-building — clients want to feel elevated, not sold to",
+  "primary_goal": "book a complimentary consultation",
+  "brand_color": "#8b5e6e",
+
+  "greeting": "Hi there! Welcome to Luxe Aesthetics MedSpa ✨ I can help with treatment questions, pricing, or booking your complimentary consultation. What can I help you with?",
+  "after_hours_message": "We're closed right now, but we'd love to connect. Leave me your name and number and we'll reach out to schedule your complimentary consultation.",
+  "lead_captured_message": "Wonderful, {name}! One of our specialists will reach out shortly to schedule your consultation. We can't wait to meet you.",
+  "fallback_message": "I want to make sure I give you the right information. Are you interested in a specific treatment, or would you like to book a complimentary consultation?"
+}

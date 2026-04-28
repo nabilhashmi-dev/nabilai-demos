@@ -1,0 +1,65 @@
+{
+  "business_name": "Luxe Aesthetics MedSpa",
+  "city": "Scranton, PA",
+  "industry": "Medical Spa / Aesthetics",
+  "main_problems": [
+    "Consultation inquiries submitted online or via chatbot get no same-day response — clients book elsewhere",
+    "No system to follow up on leads who expressed interest but didn't schedule",
+    "Post-treatment clients rarely hear from the practice again — no rebooking sequence",
+    "No automated review request after a successful treatment",
+    "Promotions and monthly specials are sent manually with inconsistent timing"
+  ],
+  "recommended_automations": [
+    {
+      "name": "Consultation Inquiry Fast-Follow",
+      "description": "When a consultation request comes in via chatbot or web form, an automated SMS fires within 5 minutes: 'Hi [name]! This is Luxe Aesthetics — we received your inquiry and would love to schedule your free consultation. What day works best for you?' Followed by email confirmation with FAQ and prep info.",
+      "trigger": "Consultation form submitted or chatbot lead captured",
+      "tools": ["n8n", "Twilio", "Postmark"],
+      "estimated_value": "Speed-to-response is the #1 factor in converting aesthetics leads — same-minute reply wins the booking"
+    },
+    {
+      "name": "Lead Nurture Sequence (Non-Bookers)",
+      "description": "Prospects who expressed interest but didn't book receive a 3-touch follow-up: Day 1 SMS, Day 3 email with before/after info and FAQ, Day 7 final SMS offer ('We're holding a spot for you — reply YES to lock it in').",
+      "trigger": "Lead captured but no appointment booked within 24 hours",
+      "tools": ["n8n", "Twilio", "Postmark"],
+      "estimated_value": "Converts 15–25% of cold leads who needed a nudge"
+    },
+    {
+      "name": "Post-Treatment Rebooking Sequence",
+      "description": "Triggered based on treatment type: Botox clients get a follow-up at 3 months ('Your Botox may be starting to wear — want to lock in your touch-up before we fill up?'), fillers at 6 months, laser at 4 weeks.",
+      "trigger": "Treatment completion date + interval based on treatment type",
+      "tools": ["n8n", "Twilio", "Postmark"],
+      "estimated_value": "Increases repeat visit rate — each repeat Botox session = $300–$600 revenue"
+    },
+    {
+      "name": "Post-Treatment Review Request",
+      "description": "2–3 days after a successful treatment, send an SMS: 'We hope you're loving your results! If you're happy, a quick Google review would mean so much to our small team. [LINK]'",
+      "trigger": "Treatment completion date + 2 days",
+      "tools": ["n8n", "Twilio", "Google Business Profile"],
+      "estimated_value": "4–8 new reviews per month — social proof is critical for aesthetics bookings"
+    },
+    {
+      "name": "Monthly Promotions Broadcast",
+      "description": "Monthly SMS/email blast to opted-in client list with current specials, seasonal offers, or new service announcements. Scheduled to send first Tuesday of each month at 10am.",
+      "trigger": "Scheduled (monthly)",
+      "tools": ["n8n", "Twilio", "Postmark", "Google Sheets"],
+      "estimated_value": "Each broadcast generates 5–15 rebookings from dormant clients"
+    }
+  ],
+  "tools_stack": {
+    "automation": "n8n (self-hosted)",
+    "sms": "Twilio",
+    "email": "Postmark",
+    "crm": "Google Sheets (or HubSpot Free)",
+    "reviews": "Google Business Profile API"
+  },
+  "expected_outcomes": {
+    "consultation_show_rate_increase": "25–35% improvement from fast follow-up",
+    "repeat_visit_increase": "2–4 additional rebookings per month",
+    "new_google_reviews_monthly": "4–8",
+    "leads_converted_from_nurture": "3–6 per month",
+    "estimated_additional_monthly_revenue": "$2,500–$6,000"
+  },
+  "implementation_timeline": "5–7 business days to build and test",
+  "monthly_retainer_estimate": "$397–$597/month"
+}

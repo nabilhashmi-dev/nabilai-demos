@@ -41,17 +41,17 @@ Local Business AI/
 ## How to Use
 
 ### 1. View a Demo
-Open any `index.html` file directly in a browser. No server needed.
+Open any `index.html` file directly in a browser, or visit the live GitHub Pages links below.
 
 ### 2. Send the Demo
-Share the demo by sending the business owner a link (e.g., hosted on GitHub Pages or a simple CDN). Use the outreach templates in `/outreach/`.
+Share the demo link with the business owner. Use the outreach templates in `/outreach/`.
 
 ### 3. Add a New Business
 When given a new business name and type:
 - Create a new folder in `AI Chatbot/` and `AI Automation/`
-- Copy the structure from an existing demo
+- Copy the structure from an existing demo in the same industry
 - Update `chatbot-config.json` with real business data
-- Tailor FAQs and lead triggers to the industry
+- Tailor intents and response copy to the specific business
 
 ---
 
@@ -59,8 +59,8 @@ When given a new business name and type:
 
 **AI Customer Assistant** — what the demo shows:
 - Answers customer questions 24/7
-- Captures leads (name, phone, email)
-- Books appointments or inquiry requests
+- Captures leads (name + phone)
+- Books appointments or estimate requests
 - Handles after-hours traffic automatically
 
 ## Secondary Upsell (sold after closing)
@@ -69,13 +69,31 @@ When given a new business name and type:
 - Missed call text-back
 - Review request automation
 - Lead follow-up sequences (SMS + email)
-- CRM sync
-- Appointment reminders
+- CRM sync and owner alerts
+- Appointment and project reminders
 
 ---
 
-## Businesses Built So Far
+## Businesses Built
 
-| Business | Type | Folder |
+| Business | Type | Folder | Live Demo |
+|---|---|---|---|
+| Carmine's Italian Kitchen | Restaurant | `carmines-italian-kitchen-scranton` | [View](https://nabilhashmi-dev.github.io/nabilai-demos/AI%20Chatbot/carmines-italian-kitchen-scranton/) |
+| Lakewood Chiropractic | Chiropractic | `lakewood-chiropractic-scranton` | [View](https://nabilhashmi-dev.github.io/nabilai-demos/AI%20Chatbot/lakewood-chiropractic-scranton/) |
+| Luxe Aesthetics MedSpa | Medical Spa | `luxe-aesthetics-medspa-scranton` | [View](https://nabilhashmi-dev.github.io/nabilai-demos/AI%20Chatbot/luxe-aesthetics-medspa-scranton/) |
+| King's Cuts Barbershop | Barbershop | `kings-cuts-barbershop-scranton` | [View](https://nabilhashmi-dev.github.io/nabilai-demos/AI%20Chatbot/kings-cuts-barbershop-scranton/) |
+| Keystone Building & Contracting | Contractor | `keystone-contracting-scranton` | [View](https://nabilhashmi-dev.github.io/nabilai-demos/AI%20Chatbot/keystone-contracting-scranton/) |
+
+---
+
+## Pricing (Nabil AI)
+
+| Tier | What They Get | Price |
 |---|---|---|
-| Carmine's Italian Kitchen | Restaurant | `carmines-italian-kitchen-scranton` |
+| Setup | Custom chatbot, configured + deployed | $497–$997 one-time |
+| Monthly | Hosting, updates, minor changes | $197–$297/month |
+| Automation Add-On | Missed call text-back, reviews, follow-ups | $397–$697/month |
+
+---
+
+*AI assistant demos built by [Nabil AI](mailto:nabil.hashmi@gmail.com)*

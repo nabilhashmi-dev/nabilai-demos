@@ -1,0 +1,66 @@
+{
+  "business_name": "King's Cuts Barbershop",
+  "city": "Scranton, PA",
+  "industry": "Barbershop / Men's Grooming",
+  "main_problems": [
+    "No online booking — clients call during cuts when barbers can't answer",
+    "Walk-in waits frustrate clients and they leave — no way to hold their spot or give wait estimates",
+    "No client retention system — regulars go months between visits with no reminder",
+    "No way to fill last-minute open slots when a client cancels",
+    "Zero review automation — the shop does great work but rarely asks for Google reviews"
+  ],
+  "recommended_automations": [
+    {
+      "name": "Missed Call Text-Back",
+      "description": "When a call is missed, an automated SMS fires within 30 seconds: 'Hey! This is King's Cuts — sorry we missed you. Want to book an appointment? Reply here or use [chatbot link] to grab a spot anytime.'",
+      "trigger": "Missed inbound call",
+      "tools": ["Twilio", "n8n"],
+      "estimated_value": "Recovers 20–30% of missed calls — each recovered client = $25–$38 per visit"
+    },
+    {
+      "name": "Appointment Confirmation + Reminder",
+      "description": "SMS confirmation immediately on booking, reminder 2 hours before the appointment: 'Reminder: your cut at King's Cuts is today at [TIME]. See you soon!'",
+      "trigger": "Appointment booked",
+      "tools": ["n8n", "Twilio"],
+      "estimated_value": "Reduces no-shows by 25–35%"
+    },
+    {
+      "name": "Last-Minute Slot Fill Broadcast",
+      "description": "When a same-day cancellation happens, an SMS goes to a list of opted-in regulars: 'A spot just opened up at King's Cuts today at [TIME] — want it? Reply YES and it's yours.' First reply gets the slot.",
+      "trigger": "Appointment cancellation (same day)",
+      "tools": ["n8n", "Twilio", "Google Sheets"],
+      "estimated_value": "Fills 50–70% of cancelled slots that would otherwise be lost revenue"
+    },
+    {
+      "name": "Client Rebooking Nudge",
+      "description": "If a client hasn't booked in 4 weeks, send an SMS: 'Hey [name], it's been a while! Your fade is probably due — want to grab a spot this week at King's Cuts?' Simple, casual, on-brand.",
+      "trigger": "Last visit date + 28 days, no new booking found",
+      "tools": ["n8n", "Twilio", "Google Sheets"],
+      "estimated_value": "Recovers 2–4 lapsed regulars per month — each = $25–$300/year in recurring revenue"
+    },
+    {
+      "name": "Post-Cut Review Request",
+      "description": "2 hours after an appointment end time, send an SMS: 'Hope the cut is fresh! If you're happy with it, a quick Google review would mean a lot — [LINK]. See you next time.'",
+      "trigger": "Appointment end time + 2 hours",
+      "tools": ["n8n", "Twilio", "Google Business Profile"],
+      "estimated_value": "4–8 new Google reviews per month — social proof drives walk-in traffic"
+    }
+  ],
+  "tools_stack": {
+    "automation": "n8n (self-hosted)",
+    "sms": "Twilio",
+    "email": "Postmark (optional — barbershops are SMS-first)",
+    "crm": "Google Sheets",
+    "reviews": "Google Business Profile API"
+  },
+  "expected_outcomes": {
+    "missed_calls_recovered_monthly": "8–15 additional bookings",
+    "no_show_reduction": "25–35%",
+    "cancelled_slots_filled": "50–70%",
+    "lapsed_clients_recovered_monthly": "2–4",
+    "new_google_reviews_monthly": "4–8",
+    "estimated_additional_monthly_revenue": "$800–$2,000"
+  },
+  "implementation_timeline": "3–5 business days to build and test",
+  "monthly_retainer_estimate": "$297–$397/month"
+}
