@@ -1,6 +1,6 @@
-# Russo's Family Kitchen — AI Chatbot Demo
+# Carmine's Italian Kitchen — AI Chatbot Demo
 
-**Business:** Russo's Family Kitchen
+**Business:** Carmine's Italian Kitchen
 **Location:** Scranton, PA
 **Industry:** Restaurant (Italian-American)
 
@@ -36,7 +36,7 @@ When lead capture completes, the lead object is stored in `window.capturedLead` 
   "email": "...",
   "timestamp": "...",
   "source": "chatbot-demo",
-  "business": "Russo's Family Kitchen"
+  "business": "Carmine's Italian Kitchen"
 }
 ```
 

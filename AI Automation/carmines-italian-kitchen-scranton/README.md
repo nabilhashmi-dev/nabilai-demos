@@ -1,13 +1,13 @@
-# Russo's Family Kitchen — AI Automation Plan
+# Carmine's Italian Kitchen — AI Automation Plan
 
-**Business:** Russo's Family Kitchen · Scranton, PA
+**Business:** Carmine's Italian Kitchen · Scranton, PA
 **Industry:** Restaurant (Italian-American)
 
 ---
 
 ## The Problem
 
-Russo's is a busy family-owned restaurant. During the dinner rush (5–8pm), staff can't answer the phone. Catering and private event inquiries come in but nobody follows up consistently. Satisfied customers leave without being asked for a review. And when the kitchen closes, the business goes dark — no one is answering questions or capturing leads.
+Carmine's is a busy family-owned restaurant. During the dinner rush (5–8pm), staff can't answer the phone. Catering and private event inquiries come in but nobody follows up consistently. Satisfied customers leave without being asked for a review. And when the kitchen closes, the business goes dark — no one is answering questions or capturing leads.
 
 Every one of these gaps is a missed revenue opportunity.
 
@@ -18,7 +18,7 @@ Every one of these gaps is a missed revenue opportunity.
 ### 1. Missed Call Text-Back
 **What it does:** When any call goes unanswered, an SMS is automatically sent within 30 seconds.
 
-> *"Hi! This is Russo's Family Kitchen — sorry we missed you. How can we help? Reply here and we'll get back to you right away."*
+> *"Hi! This is Carmine's Italian Kitchen — sorry we missed you. How can we help? Reply here and we'll get back to you right away."*
 
 **Why it matters:** Most people won't leave a voicemail, but they will reply to a text. This recovers 20–30% of calls that would otherwise be lost forever.
 

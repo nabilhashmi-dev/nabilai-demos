@@ -1,5 +1,5 @@
 {
-  "business_name": "Russo's Family Kitchen",
+  "business_name": "Carmine's Italian Kitchen",
   "city": "Scranton, PA",
   "industry": "Restaurant",
   "main_problems": [
@@ -12,7 +12,7 @@
   "recommended_automations": [
     {
       "name": "Missed Call Text-Back",
-      "description": "When a call is missed, an automated SMS is sent within 30 seconds: 'Hi! This is Russo's Family Kitchen — sorry we missed you. How can we help? Reply here and we'll get right back to you.'",
+      "description": "When a call is missed, an automated SMS is sent within 30 seconds: 'Hi! This is Carmine's Italian Kitchen — sorry we missed you. How can we help? Reply here and we'll get right back to you.'",
       "trigger": "Missed inbound call",
       "tools": ["Twilio", "n8n"],
       "estimated_value": "Recovers 20–30% of missed calls that would otherwise be lost"
@@ -26,7 +26,7 @@
     },
     {
       "name": "Post-Visit Review Request",
-      "description": "2 hours after a reservation end time, send an SMS: 'Thanks for dining with us at Russo's tonight! If you enjoyed your meal, we'd love a quick Google review — it means the world to a family-owned restaurant. [LINK]'",
+      "description": "2 hours after a reservation end time, send an SMS: 'Thanks for dining with us at Carmine's tonight! If you enjoyed your meal, we'd love a quick Google review — it means the world to a family-owned restaurant. [LINK]'",
       "trigger": "Reservation end time + 2 hours",
       "tools": ["n8n", "Twilio", "Google Business Profile"],
       "estimated_value": "4–8 new reviews per month on autopilot"

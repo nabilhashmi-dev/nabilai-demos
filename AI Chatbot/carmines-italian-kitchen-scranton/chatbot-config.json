@@ -1,5 +1,5 @@
 {
-  "business_name": "Russo's Family Kitchen",
+  "business_name": "Carmine's Italian Kitchen",
   "city": "Scranton, PA",
   "phone": "(570) 555-0192",
   "address": "418 Lackawanna Ave, Scranton, PA 18503",
@@ -170,8 +170,8 @@
   "primary_goal": "capture reservation or catering inquiry",
   "brand_color": "#c0392b",
 
-  "greeting": "Hi there! Welcome to Russo's Family Kitchen 👋 I can help with reservations, menu questions, catering, and more. What can I do for you?",
+  "greeting": "Hi there! Welcome to Carmine's Italian Kitchen 👋 I can help with reservations, menu questions, catering, and more. What can I do for you?",
   "after_hours_message": "We're closed right now, but I don't want you to miss out! Leave me your name and number and our team will call you first thing when we open.",
-  "lead_captured_message": "You're all set, {name}! Someone from Russo's will be in touch shortly. We can't wait to see you!",
+  "lead_captured_message": "You're all set, {name}! Someone from Carmine's will be in touch shortly. We can't wait to see you!",
   "fallback_message": "I want to make sure I get you the right help — are you looking to make a reservation, ask about the menu, or something else?"
 }

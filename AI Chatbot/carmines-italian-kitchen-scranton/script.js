@@ -365,7 +365,7 @@
       }
       state.data.phone = digits;
       finalizeLead('contact_capture');
-      await botReply(`Perfect, ${state.data.name}! Someone from Russo's will reach out to you shortly. Is there anything else I can help with in the meantime?`, 900);
+      await botReply(`Perfect, ${state.data.name}! Someone from Carmine's will reach out to you shortly. Is there anything else I can help with in the meantime?`, 900);
       state.flow = 'done';
       return;
     }

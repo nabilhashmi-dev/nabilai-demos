@@ -78,4 +78,4 @@ When given a new business name and type:
 
 | Business | Type | Folder |
 |---|---|---|
-| Russo's Family Kitchen | Restaurant | `russos-family-kitchen-scranton` |
+| Carmine's Italian Kitchen | Restaurant | `carmines-italian-kitchen-scranton` |
