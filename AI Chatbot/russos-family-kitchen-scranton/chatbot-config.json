@@ -1,0 +1,177 @@
+{
+  "business_name": "Russo's Family Kitchen",
+  "city": "Scranton, PA",
+  "phone": "(570) 555-0192",
+  "address": "418 Lackawanna Ave, Scranton, PA 18503",
+  "google_maps_link": "https://maps.google.com",
+
+  "hours": {
+    "Monday":    "11:00 AM – 9:00 PM",
+    "Tuesday":   "11:00 AM – 9:00 PM",
+    "Wednesday": "11:00 AM – 9:00 PM",
+    "Thursday":  "11:00 AM – 9:00 PM",
+    "Friday":    "11:00 AM – 10:00 PM",
+    "Saturday":  "11:00 AM – 10:00 PM",
+    "Sunday":    "12:00 PM – 8:00 PM"
+  },
+  "holiday_hours": "We're closed Thanksgiving and Christmas Day. Christmas Eve we close at 6pm. Hours may vary on other holidays — call ahead to confirm.",
+
+  "selling_points": [
+    "We're known for our wood-fired pizza and homemade pasta — made fresh every morning in-house.",
+    "Family-owned for over 20 years. Our Chicken Parm has been on the menu since day one and is still our most ordered dish.",
+    "Voted Best Italian in Scranton three years running by Scranton Times-Tribune readers."
+  ],
+
+  "busy_times": {
+    "peak": "Friday and Saturday evenings between 6pm and 8pm are our busiest — expect a short wait.",
+    "off_peak": "Weeknight dinners before 5:30pm and weekend lunches are much quieter. Great time to come if you prefer a relaxed experience."
+  },
+
+  "menu": {
+    "popular": [
+      {
+        "name": "Chicken Parmigiana",
+        "description": "Hand-breaded chicken cutlet, San Marzano tomato sauce, fresh mozzarella. Served with your choice of pasta.",
+        "price": "$22",
+        "tags": ["popular", "gluten-free-option"],
+        "allergens": ["gluten", "dairy", "egg"]
+      },
+      {
+        "name": "Wood-Fired Margherita Pizza",
+        "description": "Fresh mozzarella, San Marzano tomatoes, fresh basil, extra virgin olive oil. Blistered crust out of our wood-fired oven.",
+        "price": "$17",
+        "tags": ["popular", "vegetarian"],
+        "allergens": ["gluten", "dairy"]
+      },
+      {
+        "name": "Seafood Linguine",
+        "description": "Shrimp, scallops, and littleneck clams in a white wine garlic sauce over fresh linguine.",
+        "price": "$26",
+        "tags": ["popular", "seafood"],
+        "allergens": ["shellfish", "gluten"]
+      },
+      {
+        "name": "Rigatoni Bolognese",
+        "description": "Slow-cooked beef and pork ragù, San Marzano tomatoes, shaved Parmigiano Reggiano.",
+        "price": "$20",
+        "tags": ["popular"],
+        "allergens": ["gluten", "dairy", "meat"]
+      },
+      {
+        "name": "Braised Short Rib Pappardelle",
+        "description": "This week's special. Slow-braised beef short rib, fresh pappardelle, finished with truffle oil.",
+        "price": "$28",
+        "tags": ["special", "popular"],
+        "allergens": ["gluten", "dairy", "meat"]
+      }
+    ],
+    "vegan": [
+      {
+        "name": "Roasted Vegetable Flatbread",
+        "description": "Seasonal roasted vegetables, arugula, olive oil, balsamic glaze — no cheese. Fully vegan.",
+        "price": "$15"
+      },
+      {
+        "name": "Penne Arrabbiata",
+        "description": "Spicy San Marzano tomato sauce, garlic, fresh basil, crushed red pepper. Just ask us to hold the Parmigiano.",
+        "price": "$16"
+      },
+      {
+        "name": "Caprese Salad (vegan version)",
+        "description": "Vine-ripened tomatoes, fresh basil, extra virgin olive oil, sea salt. Ask for no mozzarella.",
+        "price": "$12"
+      }
+    ],
+    "gluten_free": [
+      {
+        "name": "Chicken Parmigiana (GF)",
+        "description": "Made with gluten-free breading, served with gluten-free pasta. Same great dish.",
+        "price": "$24",
+        "note": "Our kitchen is not 100% gluten-free. Please inform your server of any severe allergy."
+      },
+      {
+        "name": "Grilled Atlantic Salmon",
+        "description": "Fresh salmon fillet, lemon-caper butter, seasonal roasted vegetables. Naturally gluten-free.",
+        "price": "$25"
+      },
+      {
+        "name": "Caesar Salad (no croutons)",
+        "description": "Romaine hearts, house-made Caesar dressing, shaved Parmigiano. Just ask for no croutons.",
+        "price": "$13"
+      }
+    ],
+    "specials": {
+      "weekly": "This week's special: Braised Short Rib Pappardelle — slow-braised beef, fresh pasta, truffle oil. $28. Limited nightly.",
+      "lunch": "Weekday Lunch Special: two courses (soup or salad + entrée) for $13.99. Monday–Friday, 11am–3pm.",
+      "happy_hour": "Happy Hour every Friday 4–6pm: half-price appetizers and $4 draft beers."
+    },
+    "add_ons": [
+      "Add a Caesar salad for $8",
+      "Add homemade tiramisu for $7",
+      "Add a bottle of house wine for $22"
+    ]
+  },
+
+  "takeout": {
+    "how_to_order": "You can call us at (570) 555-0192 or order through our website. Pickup is typically ready in 20–25 minutes.",
+    "popular_items": ["Chicken Parmigiana", "Wood-Fired Margherita Pizza", "Seafood Linguine"],
+    "upsell": "Most people add a Caesar salad and tiramisu — it makes the whole meal. Want me to tell you about tonight's special too?"
+  },
+
+  "events": {
+    "live_music": "We have live music every Friday and Saturday night starting at 7pm. No cover charge.",
+    "happy_hour": "Happy Hour every Friday 4–6pm — half-price appetizers and $4 draft beers at the bar.",
+    "private_room": {
+      "capacity": 40,
+      "description": "Our private dining room seats up to 40 guests. Available for birthdays, anniversaries, corporate dinners, rehearsal dinners, and more.",
+      "minimum": "Food and beverage minimum applies. Contact us for pricing."
+    },
+    "catering": {
+      "minimum": "$300",
+      "description": "Full-service catering for events of all sizes. We handle setup, service, and cleanup. Corporate and personal events welcome."
+    }
+  },
+
+  "gift_cards": {
+    "available": true,
+    "description": "Gift cards are available in any amount at our front desk or by phone. A great gift for any occasion — birthdays, holidays, thank-yous."
+  },
+
+  "faq": {
+    "dress_code": "Smart casual — come as you are. No formal dress code required.",
+    "kids": "Very kid-friendly! We have a dedicated children's menu with pasta, pizza, and chicken fingers, plus high chairs and booster seats.",
+    "outdoor_seating": "Yes — we have a seasonal patio open April through October, weather permitting. It's a great spot in the evening.",
+    "pets": "We love dogs! Pets are welcome on the patio but not inside the restaurant.",
+    "parking": "Free street parking on Lackawanna Ave. Public garage half a block away on Spruce Street — we validate parking on weekend evenings.",
+    "reservations_policy": "We take reservations for parties of 6 or more. Smaller groups are seated first-come, first-served. Weeknight waits are usually under 15 minutes."
+  },
+
+  "intents": {
+    "reservation":  ["reserve", "reservation", "book a table", "book for", "table for", "sit", "tonight", "this weekend", "this friday", "this saturday", "can i come", "dine in", "coming in", "make a booking"],
+    "dietary_vegan": ["vegan", "plant based", "plant-based", "no meat", "no dairy", "no animal"],
+    "dietary_gf":   ["gluten free", "gluten-free", "celiac", "coeliac", "no gluten"],
+    "dietary_allergy": ["allerg", "intolerance", "nut free", "dairy free", "shellfish"],
+    "menu":         ["what's good", "whats good", "recommend", "best dish", "most popular", "what should i get", "signature", "what do you suggest", "favorite"],
+    "specials":     ["special", "specials", "happy hour", "live music", "weekly special", "what's on"],
+    "takeout":      ["takeout", "take out", "pickup", "pick up", "order online", "to go", "carry out"],
+    "events":       ["private event", "private room", "party", "event space", "catering", "cater", "birthday", "anniversary", "corporate", "large group", "large party", "buy out"],
+    "wait_time":    ["wait time", "how busy", "busy tonight", "crowded", "best time to come", "off peak", "quieter"],
+    "gift_card":    ["gift card", "gift certificate", "gift"],
+    "trust":        ["known for", "famous for", "why should", "what makes you", "reviews", "best in"],
+    "hours":        ["hours", "open", "close", "when do you", "what time", "today", "open now"],
+    "location":     ["address", "where are you", "directions", "parking", "how do i get"],
+    "kids":         ["kids", "children", "family", "child", "high chair", "kids menu"],
+    "outdoor":      ["outdoor", "patio", "outside", "terrace"],
+    "pets":         ["pet", "dog", "bring my dog", "animal"],
+    "dress_code":   ["dress code", "what to wear", "formal", "casual", "dress up"]
+  },
+
+  "tone": "warm, welcoming, family-owned Italian restaurant",
+  "primary_goal": "capture reservation or catering inquiry",
+  "brand_color": "#c0392b",
+
+  "greeting": "Hi there! Welcome to Russo's Family Kitchen 👋 I can help with reservations, menu questions, catering, and more. What can I do for you?",
+  "after_hours_message": "We're closed right now, but I don't want you to miss out! Leave me your name and number and our team will call you first thing when we open.",
+  "lead_captured_message": "You're all set, {name}! Someone from Russo's will be in touch shortly. We can't wait to see you!",
+  "fallback_message": "I want to make sure I get you the right help — are you looking to make a reservation, ask about the menu, or something else?"
+}

@@ -1,0 +1,66 @@
+{
+  "business_name": "Russo's Family Kitchen",
+  "city": "Scranton, PA",
+  "industry": "Restaurant",
+  "main_problems": [
+    "Missed calls during dinner rush (5pm–8pm) — staff can't answer and calls go to voicemail with no follow-up",
+    "Catering and private event inquiries fall through — no structured follow-up sequence after initial contact",
+    "No system to collect reviews after a positive dine-in experience",
+    "Reservation no-shows — no automated reminder system",
+    "All customer interactions rely on staff availability — nothing works after close"
+  ],
+  "recommended_automations": [
+    {
+      "name": "Missed Call Text-Back",
+      "description": "When a call is missed, an automated SMS is sent within 30 seconds: 'Hi! This is Russo's Family Kitchen — sorry we missed you. How can we help? Reply here and we'll get right back to you.'",
+      "trigger": "Missed inbound call",
+      "tools": ["Twilio", "n8n"],
+      "estimated_value": "Recovers 20–30% of missed calls that would otherwise be lost"
+    },
+    {
+      "name": "Catering Inquiry Follow-Up Sequence",
+      "description": "3-touch SMS + email sequence triggered when a catering inquiry is submitted (via chatbot, web form, or phone). Touch 1: same day confirmation. Touch 2: next morning follow-up with menu PDF. Touch 3: 3-day reminder if no response.",
+      "trigger": "Catering lead captured",
+      "tools": ["n8n", "Twilio", "Postmark", "Google Sheets"],
+      "estimated_value": "Increases catering conversion from ~20% to 40–50%"
+    },
+    {
+      "name": "Post-Visit Review Request",
+      "description": "2 hours after a reservation end time, send an SMS: 'Thanks for dining with us at Russo's tonight! If you enjoyed your meal, we'd love a quick Google review — it means the world to a family-owned restaurant. [LINK]'",
+      "trigger": "Reservation end time + 2 hours",
+      "tools": ["n8n", "Twilio", "Google Business Profile"],
+      "estimated_value": "4–8 new reviews per month on autopilot"
+    },
+    {
+      "name": "Reservation Reminders",
+      "description": "Automated SMS reminders sent 24 hours before and 2 hours before a reservation. Reduces no-shows by confirming intent and giving guests an easy way to cancel or reschedule.",
+      "trigger": "24hr and 2hr before reservation time",
+      "tools": ["n8n", "Twilio"],
+      "estimated_value": "Reduces no-shows by 30–40%, freeing up tables for walk-ins"
+    },
+    {
+      "name": "New Lead → CRM Sync",
+      "description": "Every chatbot, web form, or missed call lead is automatically logged to a Google Sheet (or HubSpot Free) with name, phone, email, source, and timestamp. Owner gets a daily digest email at 8am.",
+      "trigger": "Any new lead captured",
+      "tools": ["n8n", "Google Sheets", "Postmark"],
+      "estimated_value": "Full visibility into lead pipeline — no more sticky notes or lost contacts"
+    }
+  ],
+  "tools_stack": {
+    "automation": "n8n (self-hosted)",
+    "sms": "Twilio",
+    "email": "Postmark",
+    "crm": "Google Sheets (or HubSpot Free)",
+    "ai_responses": "OpenAI GPT-4o (for smart reply drafting)",
+    "reviews": "Google Business Profile API"
+  },
+  "expected_outcomes": {
+    "leads_recovered_monthly": "15–25 additional leads from missed calls",
+    "catering_revenue_increase": "2–4 additional catering bookings per month",
+    "new_google_reviews_monthly": "4–8",
+    "no_show_reduction": "30–40%",
+    "estimated_additional_monthly_revenue": "$2,000–$5,000"
+  },
+  "implementation_timeline": "5–7 business days to build and test",
+  "monthly_retainer_estimate": "$397–$597/month"
+}
