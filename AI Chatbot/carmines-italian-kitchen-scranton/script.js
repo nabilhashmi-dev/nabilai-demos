@@ -392,6 +392,9 @@
     };
     window.capturedLead = lead;
     console.log('[Lead Captured]', lead);
+    if (C.lead_webhook_url) {
+      fetch(C.lead_webhook_url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) }).catch(() => {});
+    }
   }
 
   // ─── Main Router ──────────────────────────────────────────────────────────────

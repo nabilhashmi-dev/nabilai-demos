@@ -65,5 +65,7 @@
   "greeting": "Hi! Welcome to Lakewood Chiropractic 👋 Whether you're dealing with pain or just want to feel your best, we're here to help. What brings you in today?",
   "after_hours_message": "We're closed right now — but if you're in pain, don't wait. Leave me your name and number and we'll call you first thing when we open.",
   "lead_captured_message": "You're all set, {name}! Our front desk will call you shortly to confirm your appointment. We look forward to helping you feel better.",
-  "fallback_message": "Happy to help — are you looking to book an appointment, ask about a condition, or check your insurance coverage?"
+  "fallback_message": "Happy to help — are you looking to book an appointment, ask about a condition, or check your insurance coverage?",
+
+  "lead_webhook_url": ""
 }

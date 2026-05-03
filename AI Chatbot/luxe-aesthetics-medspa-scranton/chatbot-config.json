@@ -65,5 +65,7 @@
   "greeting": "Hi there! Welcome to Luxe Aesthetics MedSpa ✨ I can help with treatment questions, pricing, or booking your complimentary consultation. What can I help you with?",
   "after_hours_message": "We're closed right now, but we'd love to connect. Leave me your name and number and we'll reach out to schedule your complimentary consultation.",
   "lead_captured_message": "Wonderful, {name}! One of our specialists will reach out shortly to schedule your consultation. We can't wait to meet you.",
-  "fallback_message": "I want to make sure I give you the right information. Are you interested in a specific treatment, or would you like to book a complimentary consultation?"
+  "fallback_message": "I want to make sure I give you the right information. Are you interested in a specific treatment, or would you like to book a complimentary consultation?",
+
+  "lead_webhook_url": ""
 }

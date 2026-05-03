@@ -66,5 +66,7 @@
   "greeting": "What's up! Welcome to Kings Cuts ✂️ I can book you an appointment, tell you the wait, or answer any questions. What do you need?",
   "after_hours_message": "We're closed right now. Drop your name and number and we'll hit you back when we open. Or book online anytime.",
   "lead_captured_message": "You're booked, {name}! We'll send you a reminder before your appointment. See you soon.",
-  "fallback_message": "What can I help you with — booking an appointment, checking the wait, or questions about our services?"
+  "fallback_message": "What can I help you with — booking an appointment, checking the wait, or questions about our services?",
+
+  "lead_webhook_url": ""
 }
