@@ -237,12 +237,23 @@
         return;
       }
       state.data.date = t;
-      state.step = 'time';
-      await botReply(`${t} works! What time were you thinking — lunch, dinner, or a specific time?`, 800);
+      const hasTime = /\b\d{1,2}(:\d{2})?\s*(am|pm)\b|\b(morning|afternoon|lunch|dinner|evening|night|noon)\b/i.test(t);
+      if (hasTime) {
+        state.step = 'name';
+        await botReply(`${t} — perfect! Can I get your name for the reservation?`, 750);
+      } else {
+        state.step = 'time';
+        await botReply(`${t} works! What time were you thinking — lunch, dinner, or a specific time like 7pm?`, 800);
+      }
       return;
     }
 
     if (state.step === 'time') {
+      const looksLikeTime = /\d|morning|afternoon|lunch|dinner|evening|night|noon|am|pm/i.test(t);
+      if (!looksLikeTime) {
+        await botReply(`What time works — like 7pm, dinner time, or a specific hour?`, 600);
+        return;
+      }
       state.data.time = t;
       state.step = 'name';
       await botReply(`Perfect. Last thing — can I get your name for the reservation?`, 750);
@@ -250,8 +261,8 @@
     }
 
     if (state.step === 'name') {
-      if (t.length < 2) {
-        await botReply("Could you type your name again? Just want to make sure I get it right.", 700);
+      if (t.length < 2 || /^\d+$/.test(t)) {
+        await botReply("Could you type your name for the reservation?", 700);
         return;
       }
       state.data.name = t;
@@ -347,7 +358,7 @@
     const t = text.trim();
 
     if (state.step === 'name') {
-      if (t.length < 2) {
+      if (t.length < 2 || /^\d+$/.test(t)) {
         await botReply("Just want to make sure I get your name right — could you type it again?", 700);
         return;
       }
@@ -409,16 +420,19 @@
       return;
     }
 
-    // After hours — capture contact before answering
-    if (isAfterHours()) {
-      await startContactCapture(C.after_hours_message);
-      input.disabled = false;
-      input.focus();
-      return;
-    }
-
     // Intent routing
     const intent = detectIntent(text);
+
+    // After hours — answer info questions normally; only block booking intent
+    if (isAfterHours()) {
+      const infoIntents = new Set(['menu','specials','dietary_vegan','dietary_gf','dietary_allergy','takeout','hours','location','wait_time','trust','kids','outdoor','pets','dress_code','gift_card']);
+      if (!infoIntents.has(intent)) {
+        await startContactCapture(C.after_hours_message);
+        input.disabled = false;
+        input.focus();
+        return;
+      }
+    }
 
     switch (intent) {
       case 'reservation':

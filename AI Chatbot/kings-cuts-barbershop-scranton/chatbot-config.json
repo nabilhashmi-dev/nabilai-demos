@@ -49,11 +49,11 @@
     "walk_in":     ["walk in", "walk-in", "drop in", "just come", "no appointment", "without appointment"],
     "wait_time":   ["wait", "how long", "busy", "how busy", "crowded", "wait time", "wait today"],
     "pricing":     ["price", "cost", "how much", "rates", "pricing", "charge", "fee"],
-    "services":    ["what do you do", "services", "cuts", "what kind", "what you offer", "options"],
+    "kids":        ["kids", "child", "children", "boy", "son", "young", "kid", "my son"],
     "fade":        ["fade", "taper", "skin fade", "bald fade", "low fade", "high fade", "mid fade"],
     "beard":       ["beard", "mustache", "facial hair", "shape up", "beard trim"],
     "shave":       ["shave", "straight razor", "hot towel", "clean shave", "razor"],
-    "kids":        ["kids", "child", "children", "boy", "son", "young", "kid", "my son"],
+    "services":    ["what do you do", "services", "what kind", "what you offer", "options", "menu"],
     "hours":       ["hours", "open", "close", "when", "today", "what time", "sunday", "monday"],
     "location":    ["address", "where", "directions", "parking", "find you"],
     "trust":       ["reviews", "good barber", "best barber", "recommend", "experienced"]

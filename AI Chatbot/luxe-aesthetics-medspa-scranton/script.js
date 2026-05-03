@@ -140,15 +140,17 @@
   async function advanceConsultation(text) {
     const t = text.trim();
     if (state.step === 'treatment') {
+      if (t.length < 2) { await botReply(`What treatment or concern would you like to discuss — Botox, fillers, laser, HydraFacial, or something else?`, 600); return; }
       state.data.treatment = t; state.step = 'date';
       await botReply(`Great choice. What day works best for you?`, 750); return;
     }
     if (state.step === 'date') {
+      if (t.length < 2) { await botReply(`What day works for you — this week, next week, a specific date?`, 600); return; }
       state.data.date = t; state.step = 'name';
       await botReply(`${t} — perfect. Can I get your name?`, 700); return;
     }
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`Could you type your name again?`, 600); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`Could you type your name for the consultation?`, 600); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`Lovely to meet you, ${t}! What's the best number to reach you?`, 750); return;
     }
@@ -170,7 +172,7 @@
   async function advanceContact(text) {
     const t = text.trim();
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`Could you type your name again?`, 600); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`Could you type your name?`, 600); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`Thank you, ${t}! What's the best number to reach you?`, 750); return;
     }
@@ -199,9 +201,14 @@
     if (state.flow === 'consultation') { await advanceConsultation(text); input.disabled = false; input.focus(); return; }
     if (state.flow === 'contact')      { await advanceContact(text);      input.disabled = false; input.focus(); return; }
 
-    if (isAfterHours()) { await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return; }
-
     const intent = detectIntent(text);
+
+    if (isAfterHours()) {
+      const infoIntents = new Set(['hours', 'location', 'trust', 'downtime', 'pricing', 'botox', 'fillers', 'laser', 'hydrafacial', 'microneedling', 'peels', 'skin']);
+      if (!infoIntents.has(intent)) {
+        await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return;
+      }
+    }
 
     switch (intent) {
       case 'consultation':

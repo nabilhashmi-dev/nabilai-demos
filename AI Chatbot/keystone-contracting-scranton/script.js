@@ -145,15 +145,17 @@
   async function advanceEstimate(text) {
     const t = text.trim();
     if (state.step === 'project_type') {
+      if (t.length < 2) { await botReply(`What kind of project are you thinking — remodel, addition, new home, roofing, deck, or something else?`, 600); return; }
       state.data.project_type = t; state.step = 'location';
       await botReply(`Got it — a ${t}. What's the address or general area of the project?`, 800); return;
     }
     if (state.step === 'location') {
+      if (t.length < 2) { await botReply(`What's the address or general area for the project?`, 600); return; }
       state.data.location = t; state.step = 'name';
       await botReply(`Perfect. Can I get your name?`, 700); return;
     }
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`Could you type your name again?`, 600); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`Could you type your name for the estimate request?`, 600); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`Thanks, ${t}! What's the best number to reach you?`, 750); return;
     }
@@ -175,7 +177,7 @@
   async function advanceContact(text) {
     const t = text.trim();
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`Could you type your name again?`, 600); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`Could you type your name?`, 600); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`Thanks, ${t}! Best number to reach you?`, 700); return;
     }
@@ -204,9 +206,14 @@
     if (state.flow === 'estimate') { await advanceEstimate(text); input.disabled = false; input.focus(); return; }
     if (state.flow === 'contact')  { await advanceContact(text);  input.disabled = false; input.focus(); return; }
 
-    if (isAfterHours()) { await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return; }
-
     const intent = detectIntent(text);
+
+    if (isAfterHours()) {
+      const infoIntents = new Set(['hours', 'location', 'licensed', 'trust', 'timeline', 'permits', 'survey']);
+      if (!infoIntents.has(intent)) {
+        await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return;
+      }
+    }
 
     switch (intent) {
       case 'estimate':

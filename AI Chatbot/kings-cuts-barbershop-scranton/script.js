@@ -137,15 +137,17 @@
   async function advanceAppointment(text) {
     const t = text.trim();
     if (state.step === 'service') {
+      if (t.length < 2) { await botReply(`What are you coming in for — haircut, fade, beard, combo, shave, or kids cut?`, 600); return; }
       state.data.service = t; state.step = 'date';
       await botReply(`${t} — nice. What day and time works for you?`, 700); return;
     }
     if (state.step === 'date') {
+      if (t.length < 2) { await botReply(`What day and time works for you?`, 500); return; }
       state.data.date = t; state.step = 'name';
       await botReply(`Got it. What's your name?`, 650); return;
     }
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`What's your name?`, 500); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`What's your name?`, 500); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`${t}! And your phone number so we can send a reminder?`, 700); return;
     }
@@ -167,7 +169,7 @@
   async function advanceContact(text) {
     const t = text.trim();
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`What's your name?`, 500); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`What's your name?`, 500); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`${t}! What's your number?`, 700); return;
     }
@@ -196,9 +198,14 @@
     if (state.flow === 'appointment') { await advanceAppointment(text); input.disabled = false; input.focus(); return; }
     if (state.flow === 'contact')     { await advanceContact(text);     input.disabled = false; input.focus(); return; }
 
-    if (isAfterHours()) { await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return; }
-
     const intent = detectIntent(text);
+
+    if (isAfterHours()) {
+      const infoIntents = new Set(['hours', 'location', 'pricing', 'services', 'fade', 'beard', 'shave', 'kids', 'walk_in', 'wait_time', 'trust']);
+      if (!infoIntents.has(intent)) {
+        await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return;
+      }
+    }
 
     switch (intent) {
       case 'appointment':

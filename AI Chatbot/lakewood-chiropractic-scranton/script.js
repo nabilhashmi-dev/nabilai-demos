@@ -141,15 +141,17 @@
   async function advanceAppointment(text) {
     const t = text.trim();
     if (state.step === 'type') {
+      if (t.length < 2) { await botReply(`Are you a new patient or an existing patient?`, 600); return; }
       state.data.type = t; state.step = 'date';
       await botReply(`Got it. What day works best for you?`, 750); return;
     }
     if (state.step === 'date') {
+      if (t.length < 2) { await botReply(`What day works for you — this week, next week, a specific date?`, 600); return; }
       state.data.date = t; state.step = 'name';
       await botReply(`${t} works. Can I get your name?`, 700); return;
     }
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`Could you type your name again?`, 600); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`Could you type your name for the appointment?`, 600); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`Thanks, ${t}! What's the best number to reach you?`, 750); return;
     }
@@ -171,7 +173,7 @@
   async function advanceContact(text) {
     const t = text.trim();
     if (state.step === 'name') {
-      if (t.length < 2) { await botReply(`Could you type your name again?`, 600); return; }
+      if (t.length < 2 || /^\d+$/.test(t)) { await botReply(`Could you type your name?`, 600); return; }
       state.data.name = t; state.step = 'phone';
       await botReply(`Thanks, ${t}! What's the best number to reach you?`, 750); return;
     }
@@ -200,9 +202,14 @@
     if (state.flow === 'appointment') { await advanceAppointment(text); input.disabled = false; input.focus(); return; }
     if (state.flow === 'contact')     { await advanceContact(text);     input.disabled = false; input.focus(); return; }
 
-    if (isAfterHours()) { await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return; }
-
     const intent = detectIntent(text);
+
+    if (isAfterHours()) {
+      const infoIntents = new Set(['hours', 'location', 'insurance', 'xray', 'trust']);
+      if (!infoIntents.has(intent)) {
+        await startContactCapture(C.after_hours_message); input.disabled = false; input.focus(); return;
+      }
+    }
 
     switch (intent) {
       case 'appointment': await startAppointmentFlow(null); break;
@@ -235,7 +242,7 @@
         state.pendingFlow = true; break;
       case 'insurance':
         await botReply(insuranceResponse(), 900);
-        showQuickReplies(['Book an appointment', 'What's a first visit like?']);
+        showQuickReplies(['Book an appointment', 'What\'s a first visit like?']);
         state.pendingFlow = true; break;
       case 'xray':        await botReply(xrayResponse(), 850); break;
       case 'hours':       await botReply(hoursResponse(), 800); break;
