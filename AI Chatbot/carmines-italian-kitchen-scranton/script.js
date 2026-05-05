@@ -516,8 +516,9 @@
         break;
 
       default:
-        // Fallback — gently route toward reservation or menu
         await botReply(C.fallback_message, 850);
+        showQuickReplies(['Make a reservation', 'See the menu', 'Hours & location', 'Private dining']);
+        state.pendingFlow = true;
         break;
     }
 

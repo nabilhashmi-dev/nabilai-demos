@@ -264,7 +264,11 @@
         state.pendingFlow = true; break;
       case 'hours':    await botReply(hoursResponse(), 800); break;
       case 'location': await botReply(locationResponse(), 800); break;
-      default:         await botReply(C.fallback_message, 850); break;
+      default:
+        await botReply(C.fallback_message, 850);
+        showQuickReplies(['Schedule a free estimate', 'What do you build?', 'How long does it take?']);
+        state.pendingFlow = true;
+        break;
     }
 
     input.disabled = false; input.focus();

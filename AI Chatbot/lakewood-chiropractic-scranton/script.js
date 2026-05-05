@@ -254,7 +254,11 @@
         await botReply(trustResponse(), 900);
         showQuickReplies(['Book an appointment', 'Check my insurance']);
         state.pendingFlow = true; break;
-      default:            await botReply(C.fallback_message, 850); break;
+      default:
+        await botReply(C.fallback_message, 850);
+        showQuickReplies(['Book an appointment', 'What do you treat?', 'Insurance questions', 'New patient info']);
+        state.pendingFlow = true;
+        break;
     }
 
     input.disabled = false; input.focus();

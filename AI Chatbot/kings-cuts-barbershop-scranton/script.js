@@ -251,7 +251,11 @@
         state.pendingFlow = true; break;
       case 'hours':    await botReply(hoursResponse(), 800); break;
       case 'location': await botReply(locationResponse(), 800); break;
-      default:         await botReply(C.fallback_message, 800); break;
+      default:
+        await botReply(C.fallback_message, 800);
+        showQuickReplies(['Book an appointment', 'Services & pricing', 'Hours & location']);
+        state.pendingFlow = true;
+        break;
     }
 
     input.disabled = false; input.focus();
