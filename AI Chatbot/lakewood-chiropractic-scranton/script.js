@@ -191,7 +191,7 @@
     const lead = { ...state.data, source, business: C.business_name, timestamp: new Date().toISOString() };
     window.capturedLead = lead; console.log('[Lead Captured]', lead);
     if (C.lead_webhook_url) {
-      fetch(C.lead_webhook_url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) }).catch(() => {});
+      fetch(C.lead_webhook_url, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(lead) }).catch(() => {});
     }
   }
 
