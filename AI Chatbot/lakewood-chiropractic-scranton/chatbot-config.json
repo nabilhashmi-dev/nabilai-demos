@@ -67,5 +67,5 @@
   "lead_captured_message": "You're all set, {name}! Our front desk will call you shortly to confirm your appointment. We look forward to helping you feel better.",
   "fallback_message": "Happy to help — are you looking to book an appointment, ask about a condition, or check your insurance coverage?",
 
-  "lead_webhook_url": ""
+  "lead_webhook_url": "https://n8n.propclarity.cloud/webhook/lead-capture"
 }

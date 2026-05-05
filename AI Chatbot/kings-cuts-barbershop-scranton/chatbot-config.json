@@ -68,5 +68,5 @@
   "lead_captured_message": "You're booked, {name}! We'll send you a reminder before your appointment. See you soon.",
   "fallback_message": "What can I help you with — booking an appointment, checking the wait, or questions about our services?",
 
-  "lead_webhook_url": ""
+  "lead_webhook_url": "https://n8n.propclarity.cloud/webhook/lead-capture"
 }

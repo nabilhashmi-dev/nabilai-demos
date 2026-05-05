@@ -175,5 +175,5 @@
   "lead_captured_message": "You're all set, {name}! Someone from Carmine's will be in touch shortly. We can't wait to see you!",
   "fallback_message": "I want to make sure I get you the right help — are you looking to make a reservation, ask about the menu, or something else?",
 
-  "lead_webhook_url": ""
+  "lead_webhook_url": "https://n8n.propclarity.cloud/webhook/lead-capture"
 }

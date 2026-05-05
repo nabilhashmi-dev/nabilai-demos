@@ -67,5 +67,5 @@
   "lead_captured_message": "Wonderful, {name}! One of our specialists will reach out shortly to schedule your consultation. We can't wait to meet you.",
   "fallback_message": "I want to make sure I give you the right information. Are you interested in a specific treatment, or would you like to book a complimentary consultation?",
 
-  "lead_webhook_url": ""
+  "lead_webhook_url": "https://n8n.propclarity.cloud/webhook/lead-capture"
 }
