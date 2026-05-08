@@ -438,9 +438,17 @@
     }
 
     switch (intent) {
-      case 'reservation':
-        await startReservationFlow(null);
+      case 'reservation': {
+        const isInfoQuestion = /\bdo you\b|\bcan i\b|\bcan we\b|\bare you\b|\bis it\b|\?/.test(text.toLowerCase());
+        if (isInfoQuestion) {
+          await botReply(`Yes, we do take reservations! We recommend booking ahead, especially on weekends. Want me to get one started for you?`, 900);
+          showQuickReplies(['Make a reservation', `What's the special?`, 'See full menu']);
+          state.pendingReservation = true;
+        } else {
+          await startReservationFlow(null);
+        }
         break;
+      }
 
       case 'dietary_vegan':
         await botReply(veganResponse(), 900);
